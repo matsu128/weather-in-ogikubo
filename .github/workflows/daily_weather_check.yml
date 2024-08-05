@@ -3,7 +3,7 @@ name: Daily Weather Check
 on:
   schedule:
     - cron: '0 21 * * *' # 毎朝6時(UTCで21時)に実行されるように設定
-    - cron: '35 13 * * *' # 日本時間の22時20分（UTC 13時15分）
+    - cron: '47 13 * * *' # 日本時間の22時47分（UTC 13時35分）
 
 jobs:
   check_weather:
@@ -19,7 +19,8 @@ jobs:
         python-version: 3.x
 
     - name: Install dependencies
-      run: pip install requests
+      run: |
+        pip install -r requirements.txt
 
     - name: Run weather check script
       run: python check_weather.py
