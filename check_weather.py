@@ -1,3 +1,4 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -6,7 +7,7 @@ YAHOO_WEATHER_URL = "https://weather.yahoo.co.jp/weather/jp/13/4410/13115.html"
 
 # LINE Notifyの設定
 LINE_NOTIFY_API = "https://notify-api.line.me/api/notify"
-LINE_NOTIFY_TOKEN = "9CGCZY58c9hsPsaOG0Qyp5wltwnlMkS6mf7bN1wzNAl"
+LINE_NOTIFY_TOKEN = os.getenv("LINE_NOTIFY_TOKEN")  # 環境変数から取得
 
 def get_weather():
     response = requests.get(YAHOO_WEATHER_URL)
