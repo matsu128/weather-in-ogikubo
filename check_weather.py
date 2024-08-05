@@ -21,7 +21,9 @@ def get_weather():
         for small in small_elements:
             text = small.get_text()
             if "雨" in text:
-                return "雨が降るかも."
+                return "雨かも"
+            elif "曇り" in text:
+                return "今日は曇りの予報です。"
 
     return None
 
