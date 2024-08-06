@@ -3,6 +3,7 @@ name: Daily Weather Check
 on:
   schedule:
     - cron: '0 21 * * *' # 毎朝6時(UTCで21時)に実行されるように設定
+    - cron: '*/5 * * * *' # 10分おきに実行
 
 jobs:
   check_weather:
@@ -22,4 +23,6 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run weather check script
+      env:
+        LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}
       run: python check_weather.py
