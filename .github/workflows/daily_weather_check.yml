@@ -3,7 +3,6 @@ name: Daily Weather Check
 on:
   schedule:
     - cron: '30 20 * * *'  # UTCで21:00 (日本時間6:00) に毎日実行
-    - cron: '05 4 * * *'  # UTC 2:15 (日本時間 11:55) に実行
    
   workflow_dispatch:  # 手動トリガーも追加（オプション）
 
