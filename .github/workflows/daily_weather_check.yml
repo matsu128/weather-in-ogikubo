@@ -2,7 +2,7 @@ name: Daily Weather Check
 
 on:
   schedule:
-    - cron: '37 00 * * *'  # 毎日0:37に実行
+     - cron: '*/2 * * * *'  # 2分おきに実行
 
 jobs:
   check_weather:
