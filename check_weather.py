@@ -35,7 +35,7 @@ def get_weather():
                 if "雨" in text:
                     return "雨かも"
                 elif "曇り" in text:
-                    return "今日は曇りの予報です。"
+                    return "今日は曇りっぽいね"
 
         return None
 
