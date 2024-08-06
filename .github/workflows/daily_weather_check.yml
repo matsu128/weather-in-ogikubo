@@ -2,7 +2,8 @@ name: Daily Weather Check
 
 on:
   schedule:
-     - cron: '*/2 * * * *'  # 2分おきに実行
+    - cron: '16 2 * * *'  # UTC 2:15 (日本時間 11:15) に実行
+  workflow_dispatch:  # 手動トリガーも追加（オプション）
 
 jobs:
   check_weather:
