@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import logging
 
 # ログの設定
-logging.basicConfig(filename='check_weather.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Yahoo天気APIのURL
 YAHOO_WEATHER_URL = "https://weather.yahoo.co.jp/weather/jp/13/4410/13115.html"
